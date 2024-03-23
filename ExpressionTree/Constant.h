@@ -13,4 +13,5 @@ public:
 
 	virtual std::shared_ptr<Node> derivative(std::string var) const override;
 	virtual double evaluate() const override;
+	void setConstant(double value);
 };

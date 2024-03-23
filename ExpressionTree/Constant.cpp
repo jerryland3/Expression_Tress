@@ -2,7 +2,10 @@
 
 using namespace std;
 
-Constant::Constant(double value) : Node("") {
+Constant::Constant(double value) : Node(), value{ value } {
+}
+
+void Constant::setConstant(double value) {
 	this->value = value;
 }
 

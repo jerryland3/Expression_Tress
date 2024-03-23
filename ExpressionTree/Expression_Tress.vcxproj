@@ -21,16 +21,20 @@
   <ItemGroup>
     <ClInclude Include="Add.h" />
     <ClInclude Include="Constant.h" />
+    <ClInclude Include="Div.h" />
     <ClInclude Include="Mul.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="OperatorNodes.h" />
     <ClInclude Include="Sub.h" />
     <ClInclude Include="Variable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Add.cpp" />
     <ClCompile Include="Constant.cpp" />
+    <ClCompile Include="Div.cpp" />
     <ClCompile Include="Mul.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="OperatorNodes.cpp" />
     <ClCompile Include="Sub.cpp" />
     <ClCompile Include="TestExpressionTree.cpp" />
     <ClCompile Include="Variable.cpp" />
