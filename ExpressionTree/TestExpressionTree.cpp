@@ -5,6 +5,7 @@
 #include"Add.h"
 #include"Sub.h"
 #include"Mul.h"
+#include"Div.h"
 #include <map>
 
 using namespace std;
@@ -21,7 +22,7 @@ int main() {
 	auto variableZ = make_shared<Variable>("z");
 
 	// Define intermediate nodes
-	auto mulNode1 = make_shared<Mul>(constant1, variableX);
+	auto mulNode1 = make_shared<Div>(constant1, variableX);
 	auto subNode1 = make_shared<Sub>(variableZ, variableX);
 	auto mulNode2 = make_shared<Mul>(variableY, subNode1);
 

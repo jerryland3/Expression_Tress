@@ -4,15 +4,19 @@ std::map<std::string, double> Variable::mapTable;
 
 using namespace std;
 
-Variable::Variable(string symbol) : Node(symbol) {
+Variable::Variable(string varName) : Node(), variableName{ varName } {
 }
 
 void Variable::setMapTable(map<string, double> hashMap) {
 	mapTable = hashMap;
 }
 
-shared_ptr<Node> Variable::derivative(string var) const {
-	if (var == getSymbol()) {
+void Variable::setVariable(string varName) {
+	variableName = varName;
+}
+
+shared_ptr<Node> Variable::derivative(string varName) const {
+	if (varName == variableName) {
 		return std::make_shared<Constant>(1);
 	}
 	else {
@@ -21,10 +25,10 @@ shared_ptr<Node> Variable::derivative(string var) const {
 }
 
 ostream& Variable::print(ostream& out) const {
-	out << getSymbol();
+	out << variableName;
 	return out;
 }
 
 double Variable::evaluate() const {
-	return mapTable.at(getSymbol());
+	return mapTable.at(variableName);
 }
